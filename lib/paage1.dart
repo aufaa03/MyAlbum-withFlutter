@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'pagelast.dart';
 import 'page2.dart';
 import 'album.dart';
 
@@ -16,17 +17,17 @@ class Paage1 extends StatelessWidget {
     'images/alam8.jpg',
     'images/alam9.jpg',
     'images/alam10.jpg',
-    'images/alam11.jpg',
-    'images/alam12.jpg',
-    'images/alam13.jpg',
-    'images/alam14.jpg',
-    'images/alam15.jpg',
-    'images/alam16.jpg',
-    'images/alam17.jpg',
-    'images/alam18.jpg',
-    'images/alam19.jpg',
-    'images/alam20.jpg',
-    'images/alam21.jpg',
+    // 'images/alam11.jpg',
+    // 'images/alam12.jpg',
+    // 'images/alam13.jpg',
+    // 'images/alam14.jpg',
+    // 'images/alam15.jpg',
+    // 'images/alam16.jpg',
+    // 'images/alam17.jpg',
+    // 'images/alam18.jpg',
+    // 'images/alam19.jpg',
+    // 'images/alam20.jpg',
+    // 'images/alam21.jpg',
   ];
 
   @override
@@ -70,7 +71,7 @@ class Paage1 extends StatelessWidget {
                     ),
                     child: GridView.builder(
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
+                        crossAxisCount: 2,
                         crossAxisSpacing: 10,
                         mainAxisSpacing: 10,
                       ),
@@ -103,7 +104,7 @@ class Paage1 extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => page2()), // Pindah ke Page1
+                        builder: (context) => Page2()), // Pindah ke Page2
                   );
                 },
                 child: Text('Next'),

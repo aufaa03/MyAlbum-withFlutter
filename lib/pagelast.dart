@@ -1,10 +1,10 @@
+import 'package:album_ku/album.dart';
 import 'package:flutter/material.dart';
-import 'paage1.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class MyAlbum extends StatelessWidget {
-  const MyAlbum({super.key});
-
+class PageLast extends StatelessWidget {
+  const PageLast({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,55 +14,47 @@ class MyAlbum extends StatelessWidget {
           padding: const EdgeInsets.all(10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-          
             children: [
               Material(
                 elevation: 15,
                 borderRadius: BorderRadius.circular(20),
-              
-           child:    ClipRRect(
-      borderRadius: BorderRadius.circular(20), 
-      
-           child: Image.asset(
-                'images/logo.jpg',
-                height: 300,
-                width: 300,
-                fit: BoxFit.cover,
-              ),
-              ),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Text(
-                'AlbumKu',
-                style: GoogleFonts.lato(
-                  color: Colors.brown,
-                  fontSize: 40,
-                  fontWeight: FontWeight.bold,
-                  
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset(
+                    'images/logo.jpg',
+                    height: 300,
+                    width: 300,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
               SizedBox(
                 height: 20,
               ),
               Text(
-                'Dengan Foto,Bisa melihat masa lalu',
+                'Good Bye!',
+                style: GoogleFonts.lato(
+                  color: Colors.brown,
+                  fontSize: 50,
+                ),
+              ),
+              Text(
+                'Memories Saved Successfully',
                 style: GoogleFonts.lato(
                   color: Colors.brown,
                   fontSize: 20,
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 30,),
                ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).push(
-                    
+                Navigator.push(
+                    context,
                     MaterialPageRoute(
-                        builder: (context) => Paage1()), // Pindah ke Page1
+                        builder: (context) => MyAlbum()), // Pindah ke myalbum
                   );
                 },
-                child: Text('Start'),
+                child: Text('Close Album'),
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
                   textStyle: TextStyle(
@@ -75,9 +67,6 @@ class MyAlbum extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 20,
-              )
             ],
           ),
         ),
