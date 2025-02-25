@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'pagelast.dart';
 import 'album.dart';
-import 'paage1.dart';
+import 'detail.dart';
 
-class Page2 extends StatelessWidget {
-  Page2({super.key});
+class indexPage extends StatelessWidget {
+  indexPage({super.key});
 
-  final List<String> images = [
-    // 'images/alam1.jpg',
-    // 'images/alam2.jpg',
-    // 'images/alam3.jpg',
-    // 'images/alam4.jpg',
-    // 'images/alam5.jpg',
-    // 'images/alam6.jpg',
-    // 'images/alam7.JPG',
-    // 'images/alam8.jpg',
-    // 'images/alam9.jpg',
-    // 'images/alam10.jpg',
+   final List<String> images = [
+    'images/alam1.jpg',
+    'images/alam2.jpg',
+    'images/alam3.jpg',
+    'images/alam4.jpg',
+    'images/alam5.jpg',
+    'images/alam6.jpg',
+    'images/alam7.JPG',
+    'images/alam8.jpg',
+    'images/alam9.jpg',
+    'images/alam10.jpg',
     'images/alam11.jpg',
     'images/alam12.jpg',
     'images/alam13.jpg',
@@ -45,7 +45,7 @@ class Page2 extends StatelessWidget {
                   height: 40,
                 ),
                 Text(
-                  'Page 2',
+                  'MyAlbum',
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.w600,
@@ -79,7 +79,15 @@ class Page2 extends StatelessWidget {
                       itemBuilder: (context, index) {
                         String imagesPath = images[index];
                         return RawMaterialButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Detail(
+                                        imageIndex: index,
+                                      )), // Pindah ke Page2
+                            );
+                          },
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
@@ -96,56 +104,56 @@ class Page2 extends StatelessWidget {
                 ),
               ],
             ),
-            Positioned(
-              right: 20,
-              bottom: 30,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => PageLast()), // Pindah ke Page2
-                  );
-                },
-                child: Text('Next'),
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-                  textStyle: TextStyle(
-                    fontSize: 16,
-                  ),
-                  backgroundColor: Colors.lightBlue,
-                  foregroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 20,
-              bottom: 30,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => Paage1()), // Pindah ke myalbum
-                  );
-                },
-                child: Text('Back'),
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-                  textStyle: TextStyle(
-                    fontSize: 16,
-                  ),
-                  backgroundColor: Colors.lightBlue,
-                  foregroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                ),
-              ),
-            ),
+            // Positioned(
+            //   right: 20,
+            //   bottom: 30,
+            //   child: ElevatedButton(
+            //     onPressed: () {
+            //       Navigator.push(
+            //         context,
+            //         MaterialPageRoute(
+            //             builder: (context) => PageLast()), // Pindah ke Page2
+            //       );
+            //     },
+            //     child: Text('Next'),
+            //     style: ElevatedButton.styleFrom(
+            //       padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+            //       textStyle: TextStyle(
+            //         fontSize: 16,
+            //       ),
+            //       backgroundColor: Colors.lightBlue,
+            //       foregroundColor: Colors.white,
+            //       shape: RoundedRectangleBorder(
+            //         borderRadius: BorderRadius.circular(10),
+            //       ),
+            //     ),
+            //   ),
+            // ),
+            // Positioned(
+            //   left: 20,
+            //   bottom: 30,
+            //   child: ElevatedButton(
+            //     onPressed: () {
+            //       Navigator.push(
+            //         context,
+            //         MaterialPageRoute(
+            //             builder: (context) => Page1()), // Pindah ke myalbum
+            //       );
+            //     },
+            //     child: Text('Back'),
+            //     style: ElevatedButton.styleFrom(
+            //       padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+            //       textStyle: TextStyle(
+            //         fontSize: 16,
+            //       ),
+            //       backgroundColor: Colors.lightBlue,
+            //       foregroundColor: Colors.white,
+            //       shape: RoundedRectangleBorder(
+            //         borderRadius: BorderRadius.circular(10),
+            //       ),
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),

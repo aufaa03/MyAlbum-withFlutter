@@ -1,5 +1,6 @@
+import 'package:album_ku/indexPage.dart';
 import 'package:flutter/material.dart';
-import 'paage1.dart';
+import 'indexPage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MyAlbum extends StatelessWidget {
@@ -59,7 +60,7 @@ class MyAlbum extends StatelessWidget {
                   Navigator.of(context).push(
                     
                     MaterialPageRoute(
-                        builder: (context) => Paage1()), // Pindah ke Page1
+                        builder: (context) => indexPage()), // Pindah ke Page1
                   );
                 },
                 child: Text('Start'),
